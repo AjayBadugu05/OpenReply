@@ -6,11 +6,11 @@
     "dev": "next dev",
     "postinstall": "prisma generate --schema=./prisma/schema.prisma",
     "build": "prisma generate --schema=./prisma/schema.prisma && next build",
-    "vercel-build": "prisma generate --schema=./prisma/schema.prisma && node scripts/migrate.js && next build",
+    "vercel-build": "prisma generate --schema=./prisma/schema.prisma && node scripts/migrate.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "db:generate": "prisma generate --schema=./prisma/schema.prisma",
-    "db:migrate": "node scripts/migrate.js",
+    "db:migrate": "node scripts/migrate.mjs",
     "worker": "tsx worker/dm-worker.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
